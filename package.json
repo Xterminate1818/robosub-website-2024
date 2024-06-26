@@ -1,0 +1,22 @@
+{
+  "name": "robosub-website-2024",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Xterminate1818/robosub-website-2024.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xterminate1818/robosub-website-2024/issues"
+  },
+  "homepage": "https://github.com/Xterminate1818/robosub-website-2024#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
