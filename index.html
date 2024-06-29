@@ -97,88 +97,42 @@
         </u> 
       </h2>
       <!-- People grid -->
-      <div class="row row-cols-2 row-cols-lg-3 g-4" id="people">
-         <!-- Denise  -->   
-        <div class="col">
-          <article class="card h-100">
-            <img src="/people/denise_guerra.jpg" class="card-img-top">
-            <div class="card-body">
-              <span class="badge rounded-pill text-bg-success float-end">
-                President
-              </span>
-              <span class="badge rounded-pill text-bg-danger float-end">
-                Co-Founder
-              </span>
-              <h5 class="card-title text-decoration-underline">
-                Denise Guerra
-              </h5>
-              <p class="card-text">
-                UTSA Mechanical Engineering &amp; Global Affairs 2024
-                <br/>
-                <a href="mailto:Dyguerra91@hotmail.com">
-                  Dyguerra91@hotmail.com
-                </a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <!-- Logan (me!)  -->
-        <div class="col">
-          <article class="card h-100">
-            <img src="/res/person.jpg" class="card-img-top">
-            <div class="card-body">
-              <span class="badge rounded-pill text-bg-primary float-end">Lead</span>
-              <h5 class="card-title text-decoration-underline">
-                Logan Gatlin
-              </h5>
-              <p class="card-text">
-                UTSA Computer Science 2025 
-                <br/>
-                <a href="mailto:logan@gatlintc.com">
-                  logan@gatlintc.com
-                </a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <!-- Jesus  -->
-        <div class="col">
-          <article class="card h-100">
-            <img src="/people/jesus_gonzalez.jpg" class="card-img-top">
-            <div class="card-body">
-              <span class="badge rounded-pill text-bg-primary float-end">Lead</span>
-              <h5 class="card-title text-decoration-underline">
-                Jesus Gonzalez
-              </h5>
-              <p class="card-text">
-                UTSA Mechanical Engineering 2024 
-                <br/>
-                <a href="mailto:jesus962008@live.com">
-                  jesus962008@live.com
-                </a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <!-- Shamima  -->
-        <div class="col">
-          <article class="card h-100">
-            <img src="/res/person.jpg" class="card-img-top">
-            <div class="card-body">
-              <span class="badge rounded-pill text-bg-primary float-end">Lead</span>
-              <h5 class="card-title text-decoration-underline">
-                Shamima Akter
-              </h5>
-              <p class="card-text">
-                UTSA MSc. Computer Engineering 2024
-                <br/>
-                <a href="mailto:shamima.akter12000@gmail.com">
-                  shamima.akter12000@gmail.com
-                </a>
-              </p>
-            </div>
-          </article>
-        </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="people">
+        <c-person 
+          name="Denise Guerra"
+          major="Mechanical Engineering 2024"
+          email="Dyguerra91@hotmail.com"
+          badges="president cofounder"></c-person>
+        <c-person 
+          name="Logan Gatlin"
+          major="Computer Science 2025"
+          email="logan@gatlintc.com"
+          badges="lead"></c-person>
+        <c-person 
+          name="Jesus Gonzalez"
+          major="Mechanical Engineering 2024"
+          email="jesus962008@live.com"
+          badges="lead"></c-person>
+        <c-person 
+          name="Shamima Akter"
+          major="MSc. Computer Engineering 2024"
+          email="shamima.akter12000@gmail.com"
+          badges="lead"></c-person>
+        <c-person 
+          name="Mauricio Figueroa"
+          major="Electrical Engineering 2026"
+          email="mauricio.figueroa@farfetched.dev"
+          badges="lead"></c-person>
+        <c-person 
+          name="Allan Aanonsen"
+          major="Computer Engineering 2026"
+          email="a96742451@gmail.com"
+          badges="team"></c-person>
+        <c-person 
+          name="Adam Snyder"
+          major="Mechanical Engineering 2026"
+          email="adam.snydertwo@gmail.com"
+          badges="team"></c-person>
       </div>
       <h3> Our Mission Statement </h3>
       <p class="lead">
@@ -194,7 +148,15 @@
         </u> 
       </h2>
       <!-- Parts grid -->
-      <div class="row row-cols-2 row-cols-md-4 g-4" id="parts">
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+        <c-part name="NVIDIA Jetson" href="https://a.co/d/eFkF9Wu" image="jetson.jpg"></c-part>
+        <c-part name="Raspberry Pi Pico" href="https://a.co/d/i4piSYu" image="pico.jpg"></c-part>
+        <c-part name="Thruster Motor" href="https://a.co/d/7LsN7ta" image="thruster.jpg"></c-part>
+        <c-part name="5 Megapixel Camera" href="https://a.co/d/924VXMo" image="camera.jpg"></c-part>
+        <c-part name="Ping2 Sonar Altimeter and Echosounder" href="https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping-sonar-r2-rp/" image="sonar.jpg"></c-part>
+        <c-part name="Bar30 Depth and Pressure Sensor" href="https://bluerobotics.com/store/sensors-sonars-cameras/sensors/bar30-sensor-r1/" image="depth.jpg"></c-part>
+        <c-part name="Omnidirectional LIDAR Scanner" href="https://www.amazon.com/dp/B07TJW5SXF?_encoding=UTF8&psc=1&ref_=cm_sw_r_cp_ud_dp_9GB46PS7YBKKZPAJY3ES" image="lidar.jpg"></c-part>
+        <c-part name="View the full parts list here" href="/parts_list.pdf" image="more.svg"></c-part>       
       </div>
       <h3> Design Principles </h3>
       <p class="lead">
