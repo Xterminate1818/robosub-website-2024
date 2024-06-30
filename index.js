@@ -153,7 +153,7 @@ class Part extends HTMLElement {
     let link = this.getAttribute("href");
     let image = this.getAttribute("image");
     this.innerHTML = `
-      <div class="col h-100 d-flex align-items-stretch">
+      <div class="col w-100 h-100 d-flex align-items-stretch">
         <article class="card h-100">
           <img src="/parts/${image}" class="card-img-top">
           <div class="card-body bg-body-tertiary"> 
