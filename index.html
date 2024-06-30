@@ -19,100 +19,85 @@
     <script type="module" src="/index.js"> </script>
     <title>My Page</title>
   </head>
-  <nav id="topNav" class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-    <div class="container-fluid">
-      <a href="#" class="navbar-brand">
-        <img src="/res/ar_logo.webp" width=auto height="50" class="d-inline-block align-text-top">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <!-- <ul class="navbar-nav"> -->
-      <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" id="navAboutUs" href="#aboutUs">
-            About Us
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="navTheRobot" href="#theRobot">
-            The Robot
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="navDocumentation" href="#documentation">
-            Documentation
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="navOurSupporters" href="/#ourSupporters">
-            Our Supporters
-          </a>
-        </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+
   <body>
-    <div class="container" data-bs-spy="scroll" 
-      data-bs-target="topNav" data-bs-root-margin="0px 0px -40%" 
-      data-bs-smooth-scroll="true" tabindex="0">
-      <div id="carousel" class="carousel slide carousel-fade">
-        <!-- Side navigation buttons -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <!-- Slides -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="/res/car1.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/res/car2.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/res/car3.webp" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <!-- Bottom navigation buttons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+    <nav id="topNav" class="navbar navbar-expand-lg bg-body-tertiary sticky-top"> <div class="container-fluid"> 
+        <a href="#" class="navbar-brand">
+          <img src="/res/ar_logo.webp" width=auto height="50" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" id="navAboutUs" href="#aboutUs">
+              About Us
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navTheRobot" href="#" role="button" data-bs-toggle="dropdown">
+              The Robot
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#theRobot"> 
+                  Images
+              </a></li>
+              <li><a class="dropdown-item" href="#computerSystems"> 
+                  Computer Systems
+              </a></li>
+              <li><a class="dropdown-item" href="#sensors"> 
+                  Sensors
+              </a></li>
+              <li><a class="dropdown-item" href="#technicalDiagram"> 
+                  Technical Diagram
+              </a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navOurSupporters" href="/#ourSupporters">
+              Our Supporters
+            </a>
+          </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+        </div>
       </div>
-      <h2 class="text-center display-3" id="aboutUs"> 
-        <u> 
-          About Us 
-        </u> 
-      </h2>
+    </nav>
+  <div class="container" data-bs-spy="scroll" data-bs-target="topNav" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+    <article class="card">
+      <div class="card-img-top ratio ratio-16x9">
+        <iframe 
+          src="https://www.youtube-nocookie.com/embed/NlXoM1eD9Qg?si=TtMRhVHZzf_TV4Aw&amp;controls=0" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="card-body bg-primary-subtle p-5">
+        <h1 class="fw-bold display-1 text-center">
+          RowdySub Man 'o War
+        </h1>
+        <h3 class="display-4 text-center">
+          UTSAAR 2024
+        </h3>
+      </div>
+    </article>
+      <!-- <img src="robot/robot.png" class="w-100 img-fluid"/> -->
+      <c-header type="1" id="aboutUs"> 
+        About Us 
+      </c-header>
       <!-- People grid -->
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="people">
+      <div class="justify-content-center row row-cols-3 row-cols-sm-2 row-cols-lg-3 g-4" id="people">
         <c-person 
           name="Denise Guerra"
           major="Mechanical Engineering 2024"
           email="Dyguerra91@hotmail.com"
-          badges="president cofounder"></c-person>
-        <c-person 
-          name="Logan Gatlin"
-          major="Computer Science 2025"
-          email="logan@gatlintc.com"
-          badges="lead"></c-person>
-        <c-person 
-          name="Jesus Gonzalez"
-          major="Mechanical Engineering 2024"
-          email="jesus962008@live.com"
-          badges="lead"></c-person>
+          badges="cofounder president"></c-person>
         <c-person 
           name="Shamima Akter"
           major="MSc. Computer Engineering 2024"
@@ -122,6 +107,16 @@
           name="Mauricio Figueroa"
           major="Electrical Engineering 2026"
           email="mauricio.figueroa@farfetched.dev"
+          badges="lead"></c-person>
+        <c-person 
+          name="Logan Gatlin"
+          major="Computer Science 2025"
+          email="logan@gatlintc.com"
+          badges="lead"></c-person>
+        <c-person 
+          name="Jesus Gonzalez"
+          major="Mechanical Engineering 2024"
+          email="jesus962008@live.com"
           badges="lead"></c-person>
         <c-person 
           name="Allan Aanonsen"
@@ -134,7 +129,9 @@
           email="adam.snydertwo@gmail.com"
           badges="team"></c-person>
       </div>
-      <h3> Our Mission Statement </h3>
+      <c-header type=2>
+        Our Mission Statement
+      </c-header>
       <p class="lead">
       As an educational organization, we believe that working on a variety of diverse projects, along with strong teamwork, is
       the best way to learn about robotics. We offer different opportunities under computer science, electrical engineering,
@@ -142,46 +139,9 @@
       career opportunities through hands-on robotics
       projects and industry collaborations.
       </p>
-      <h2 class="text-center display-3" id="theRobot"> 
-        <u> 
-          The Robot 
-        </u> 
-      </h2>
-      <!-- Parts grid -->
-      <div class="row row-cols-2 row-cols-md-4 g-4">
-        <c-part name="NVIDIA Jetson" href="https://a.co/d/eFkF9Wu" image="jetson.jpg"></c-part>
-        <c-part name="Raspberry Pi Pico" href="https://a.co/d/i4piSYu" image="pico.jpg"></c-part>
-        <c-part name="Thruster Motor" href="https://a.co/d/7LsN7ta" image="thruster.jpg"></c-part>
-        <c-part name="5 Megapixel Camera" href="https://a.co/d/924VXMo" image="camera.jpg"></c-part>
-        <c-part name="Ping2 Sonar Altimeter and Echosounder" href="https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping-sonar-r2-rp/" image="sonar.jpg"></c-part>
-        <c-part name="Bar30 Depth and Pressure Sensor" href="https://bluerobotics.com/store/sensors-sonars-cameras/sensors/bar30-sensor-r1/" image="depth.jpg"></c-part>
-        <c-part name="Omnidirectional LIDAR Scanner" href="https://www.amazon.com/dp/B07TJW5SXF?_encoding=UTF8&psc=1&ref_=cm_sw_r_cp_ud_dp_9GB46PS7YBKKZPAJY3ES" image="lidar.jpg"></c-part>
-        <c-part name="View the full parts list here" href="/parts_list.pdf" image="more.svg"></c-part>       
-      </div>
-      <h3> Design Principles </h3>
-      <p class="lead">
-      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
-      quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
-      deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
-      libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
-      possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut
-      rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic
-      tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
-      asperiores repellat.
-      </p>
-      <h2 class="text-center display-3" id="documentation"> 
-        <u> 
-          Documentation 
-        </u> 
-      </h2>
-      <div class="d-flex justify-content-center">
-        <ul class="col-8 d-flex list-group">
-          <li class="list-group-item">
-            <img src="/res/electrical_diagram.svg" class="img-fluid"/> 
-          </li>
-        </ul>
-      </div>
-      <h3> Weekly Team Journal </h3>
+      <c-header type=2> 
+        Weekly Team Journal
+      </c-header>
       <article class="card h-25">
         <nav class="card-header">
           <ul class="pagination">
@@ -221,33 +181,70 @@
           Loading...
         </p>
       </article>
-      <h2 class="text-center display-3" id="ourSupporters">
-        <u> 
-          Our Supporters
-        </u> 
-      </h2>
+      <c-header type=1 id="theRobot"> 
+        The Robot
+      </c-header>
+      <article class="card mb-5">
+        <img src="/robot/cad.png" class="card-img-top"/>
+        <div class="card-body  bg-body-tertiary">
+          <h2 class="card-title display-3 text-center"> CAD Prototype </h2>
+        </div>
+      </article>
+
+      <article class="card mb-5">
+        <img src="/robot/robot.png" class="card-img-top"/>
+        <div class="card-body  bg-body-tertiary">
+          <h2 class="card-title display-3 text-center"> Final Product </h2>
+        </div>
+      </article>
+      <c-header type=2> 
+        Computer Systems
+      </c-header>
+      <div class="justify-content-center row row-cols-2 row-cols-md-3 g-4" id="computerSystems">
+        <c-part name="NVIDIA Jetson" href="https://a.co/d/eFkF9Wu" image="jetson.jpg"></c-part>
+        <c-part name="Raspberry Pi Pico" href="https://a.co/d/i4piSYu" image="pico.jpg"></c-part>
+        <c-part name="Arduino Nano" href="https://a.co/d/iBslOkX" image="nano.jpg"></c-part>
+      </div>
+      <c-header type=2> 
+        Sensors
+      </c-header>
+      <div class="justify-content-center row row-cols-2 row-cols-md-3 g-4" id="sensors">
+        <c-part name="5 Megapixel Camera" href="https://a.co/d/924VXMo" image="camera.jpg"></c-part>
+        <c-part name="Ping2 Sonar Altimeter and Echosounder" href="https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping-sonar-r2-rp/" image="sonar.jpg"></c-part>
+        <c-part name="Bar30 Depth and Pressure Sensor" href="https://bluerobotics.com/store/sensors-sonars-cameras/sensors/bar30-sensor-r1/" image="depth.jpg"></c-part>
+        <c-part name="Omnidirectional LIDAR Scanner" href="https://www.amazon.com/dp/B07TJW5SXF?_encoding=UTF8&psc=1&ref_=cm_sw_r_cp_ud_dp_9GB46PS7YBKKZPAJY3ES" image="lidar.jpg"></c-part>
+        <c-part name="IMU" href="" image="imu.jpg"></c-part>
+        <c-part name="Proximity Sensor" href="" image="proximity.jpg"></c-part>
+      </div>
+      <article class="mt-5 card mb-5" id="technicalDiagram">
+        <img src="/res/electrical_diagram.svg" class="img-fluid"/> 
+        <div class="card-body  bg-body-tertiary">
+          <h2 class="card-title display-3 text-center" >
+            Technical Diagram 
+          </h2>
+        </div>
+      </article>
+      <c-header type=1 id="ourSupporters"> 
+        Our Supporters
+      </c-header>
       <div class="d-flex justify-content-center">
         <ul class="col-8 d-flex list-group">
           <!-- General Dynamics -->
-          <li class="list-group-item">
-            <img src="res/general_dynamics_logo.svg" class="img-fluid">
-          </li>
+          <c-sponsor image="general_dynamics_logo.svg" href=""> </c-sponsor>
           <!-- Mitre -->
-          <li class="list-group-item">
-            <img src="res/mitre_logo.svg" class="img-responsive">
-          </li>
+          <c-sponsor image="mitre_logo.svg" href=""> </c-sponsor>
           <!-- Wex Foundation -->
-          <li class="list-group-item">
-            <img src="res/wex_foundation_logo.svg" class="img-fluid">
-          </li>
+          <c-sponsor image="wex_foundation_logo.svg" href=""> </c-sponsor>
           <!-- Lockheed Martin -->
-          <li class="list-group-item">
-            <img src="res/lockheed_martin_logo.svg" class="img-fluid">
-          </li>
+          <c-sponsor image="lockheed_martin_logo.svg" href=""> </c-sponsor>
+          <!-- Alamo Colleges District -->
+          <c-sponsor image="alamo_colleges_district.svg" href=""> </c-sponsor>
+          <!-- UTSA --> 
+          <c-sponsor image="utsa.png" href=""> </c-sponsor>
           <!-- UTSA Engineering -->
-          <li class="list-group-item">
-            <img src="res/utsa_engineering_logo.svg" class="img-fluid">
-          </li>
+          <c-sponsor image="utsa_engineering_logo.svg" href=""> </c-sponsor>
+          <!-- Pre freshman engineering program -->
+          <c-sponsor image="prep.png" href=""> </c-sponsor>
         </ul>
       </div>
     </div>
