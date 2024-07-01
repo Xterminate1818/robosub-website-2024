@@ -1,5 +1,6 @@
 import * as bootstrap from 'bootstrap'
 
+
 class Header extends HTMLElement {
   static observedAttributes = ["type"];
   
@@ -23,7 +24,7 @@ class Header extends HTMLElement {
         break
       case "2":
       this.innerHTML = `
-        <h3 class="mt-3" id="${id}"> 
+        <h3 class="mt-3 fw-bolder" id="${id}"> 
           ${inner}
         </h3>
       `;
@@ -87,28 +88,58 @@ class Person extends HTMLElement {
     let badges_html = ``;
     badges.forEach((b, _) => {
       switch (b) {
+        case "director":
+          badges_html += 
+            `<span class="badge rounded-pill text-bg-success">
+                Project Director
+              </span>`;
+          break;
         case "president":
           badges_html += 
-            `<span class="w-100 badge rounded-pill text-bg-success float-end">
+            `<span class="badge rounded-pill text-bg-warning">
                 President
               </span>`;
           break;
         case "cofounder":
           badges_html += 
-            `<span class="w-100 badge rounded-pill text-bg-danger float-end">
+            `<span class="badge rounded-pill text-bg-danger">
                 Co-Founder
-              </span> <br/>`;
+              </span>`;
           break;
-        case "lead":
+        case "cs":
           badges_html += 
-            `<span class="w-100 badge rounded-pill text-bg-primary float-end">
-                Lead
+            `<span 
+            class="badge rounded-pill text-bg-primary">
+                Computer Science Lead
+              </span>`;
+          break;
+        case "ee":
+          badges_html += 
+            `<span 
+            class="badge rounded-pill text-bg-primary">
+                Electrical Engineering Lead
+              </span>`;
+          break;
+        case "me":
+          badges_html += 
+            `<span 
+            class="badge rounded-pill text-bg-primary">
+                Mechanical Engineering Lead
+              </span>`;
+          break;
+        case "ce":
+          badges_html += 
+            `<span 
+            class="badge rounded-pill text-bg-primary"
+            data-bs-toggle="tooltip" 
+            data-bs-title="Computer Engineering Lead">
+                Computer Engineering Lead
               </span>`;
           break;
         case "team":
           badges_html += 
-            `<span class="w-100 badge rounded-pill text-bg-secondary float-end">
-                Volunteer
+            `<span class="badge rounded-pill text-bg-secondary">
+                Team Member
               </span>`;
           break;
       }
@@ -116,14 +147,14 @@ class Person extends HTMLElement {
     this.innerHTML = `
           <div class="col h-100 d-flex align-items-stretch">
             <article class="card ">
-              <img src="/people/${picture}" class="card-img-top">
+              <img src="/people/${picture}" class="card-img-top" alt="Professional head-shot">
               <div class="card-body bg-body-tertiary">
-                <div class="float-end">
-                  ${badges_html}
-                </div>
                 <h5 class="card-title text-decoration-underline">
                   ${name}
                 </h5>
+                <h6 class="card-subtitle">
+                  ${badges_html}
+                </h6>
                 <p class="card-text">
                   <small>
                   UTSA ${major} 
@@ -153,9 +184,9 @@ class Part extends HTMLElement {
     let link = this.getAttribute("href");
     let image = this.getAttribute("image");
     this.innerHTML = `
-      <div class="col w-100 h-100 d-flex align-items-stretch">
+      <div class="col h-100 d-flex align-items-stretch">
         <article class="card h-100">
-          <img src="/parts/${image}" class="card-img-top">
+          <img src="/parts/${image}" class="card-img-top" alt="Product marketing image">
           <div class="card-body bg-body-tertiary"> 
             <a href="${link}" class="stretched-link fw-bold"> 
               ${name}
@@ -171,19 +202,20 @@ customElements.define("c-part", Part);
 
 class Sponsor extends HTMLElement {
 
-  static observedAttributes = ["image", "href"];
+  static observedAttributes = ["image", "href", "name"];
 
   constructor() {
     super();
   }
 
   connectedCallback() {
+    let name = this.getAttribute("name");
     let image = this.getAttribute("image");
     let link = this.getAttribute("href");
     this.innerHTML = `
         <li class="list-group-item">
           <a href=${link}>
-            <img src="/sponsors/${image}" class="img-fluid">
+            <img src="/sponsors/${image}" class="img-fluid" alt="${name}">
           </a>
         </li>
       `;
@@ -229,3 +261,7 @@ async function init() {
 
 // This prevents grabbing weeks from blocking (i think?)
 init()
+
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

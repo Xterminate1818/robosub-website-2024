@@ -17,13 +17,17 @@
     </script>
 
     <script type="module" src="/index.js"> </script>
-    <title>My Page</title>
+    <title> UTSA RowdySub </title>
   </head>
 
   <body>
-    <nav id="topNav" class="navbar navbar-expand-lg bg-body-tertiary sticky-top"> <div class="container-fluid"> 
+    <nav id="topNav" class="navbar navbar-expand-md bg-body-tertiary sticky-top"> <div class="container-fluid"> 
         <a href="#" class="navbar-brand">
-          <img src="/res/ar_logo.webp" width=auto height="50" class="d-inline-block align-text-top">
+          <img src="/res/ar_logo.webp" 
+          width=auto 
+          height="50" 
+          class="d-inline-block align-text-top"
+          alt="Advanced Robotics logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -32,16 +36,27 @@
         <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" id="navAboutUs" href="#aboutUs">
-              About Us
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navOurTeam" href="#ourTeam">
+              Team
             </a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navTheRobot" href="#" role="button" data-bs-toggle="dropdown">
-              The Robot
+              AUV
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#theRobot"> 
                   Images
+              </a></li>
+              <li><a class="dropdown-item" href="#buoyancySystems"> 
+                  Buoyancy Systems
+              </a></li>
+              <li><a class="dropdown-item" href="#electricalSystems"> 
+                  Electrical Systems
               </a></li>
               <li><a class="dropdown-item" href="#computerSystems"> 
                   Computer Systems
@@ -56,14 +71,14 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" id="navOurSupporters" href="/#ourSupporters">
-              Our Supporters
+              Sponsors 
             </a>
           </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">Search</button>
-          </form>
+          <!-- <form class="d-flex" role="search"> -->
+          <!--   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+          <!--   <button class="btn btn-outline-primary" type="submit">Search</button> -->
+          <!-- </form> -->
         </div>
       </div>
     </nav>
@@ -87,37 +102,61 @@
         </h3>
       </div>
     </article>
-      <!-- <img src="robot/robot.png" class="w-100 img-fluid"/> -->
       <c-header type="1" id="aboutUs"> 
         About Us 
       </c-header>
+      <article class="card mb-5">
+        <img src="/people/board.webp" class="card-img-top" alt="Image of Advanced Robotics Executive Board standing in front of a staircase"/>
+        <div class="card-body  bg-body-tertiary">
+          <h2 class="card-title display-3 text-center"> Advanced Robotics Executive Board </h2>
+          <h3 class="card-subtitle display-4 text-center"> (Fall 2023 - Spring 2024) </h3>
+        </div>
+      </article>
+      <p class="fs-5">
+        Advanced Robotics is a registered student organization at the University of Texas at San Antonio.
+        AR aspires to greatly enhance the prestige of the college of engineering at UTSA by providing professional mentorship,
+        technical training, and imparting leadership qualities in its members. AR accepts all skill levels, embraces teamwork
+        and diversity, and is dedicated to teaching its members beginning to advanced robotics. AR aims to inspire and greatly
+        spark the passion for learning engineering within the UTSA college of engineering student body and local community
+      </p>
+      <c-header type=2>
+        Mission Statement
+      </c-header>
+      <p class="fs-5">
+      To establish a premiere, esteemed robotics organization at UTSA for the purpose of creating an enhanced engineering
+      education by providing technical and leadership experience through robotic project based applications, and industry
+      research oriented collaborations.
+      </p>
+      <c-header type=1 id="ourTeam">
+        Our Team
+      </c-header>
       <!-- People grid -->
-      <div class="justify-content-center row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="people">
+      <div class="mb-5 justify-content-center row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="people">
         <c-person 
           name="Denise Guerra"
           major="Mechanical Engineering 2024"
           email="Dyguerra91@hotmail.com"
-          badges="cofounder president"></c-person>
+          badges="cofounder president director"></c-person>
         <c-person 
           name="Shamima Akter"
           major="MSc. Computer Engineering 2024"
           email="shamima.akter12000@gmail.com"
-          badges="lead"></c-person>
+          badges="ce"></c-person>
         <c-person 
           name="Mauricio Figueroa"
           major="Electrical Engineering 2026"
           email="mauricio.figueroa@farfetched.dev"
-          badges="lead"></c-person>
+          badges="ee"></c-person>
         <c-person 
           name="Logan Gatlin"
           major="Computer Science 2025"
           email="logan@gatlintc.com"
-          badges="lead"></c-person>
+          badges="cs"></c-person>
         <c-person 
           name="Jesus Gonzalez"
           major="Mechanical Engineering 2024"
           email="jesus962008@live.com"
-          badges="lead"></c-person>
+          badges="me"></c-person>
         <c-person 
           name="Allan Aanonsen"
           major="Computer Engineering 2026"
@@ -129,16 +168,6 @@
           email="adam.snydertwo@gmail.com"
           badges="team"></c-person>
       </div>
-      <c-header type=2>
-        Our Mission Statement
-      </c-header>
-      <p class="lead">
-      As an educational organization, we believe that working on a variety of diverse projects, along with strong teamwork, is
-      the best way to learn about robotics. We offer different opportunities under computer science, electrical engineering,
-      mechanical engineering, and project management. We strive to enhance students’ professional development, leadership, and
-      career opportunities through hands-on robotics
-      projects and industry collaborations.
-      </p>
       <c-header type=2> 
         Weekly Team Journal
       </c-header>
@@ -182,39 +211,55 @@
         </p>
       </article>
       <c-header type=1 id="theRobot"> 
-        The Robot
+        The
+        <abbr class="" title="Autonomous Underwater Vehicle"> AUV </abbr>
       </c-header>
       <article class="card mb-5">
-        <img src="/robot/cad.png" class="card-img-top"/>
+        <img src="/robot/cad.png" class="card-img-top" alt="Computer generated image of the AUV prototype"/>
         <div class="card-body  bg-body-tertiary">
           <h2 class="card-title display-3 text-center"> CAD Prototype </h2>
         </div>
       </article>
 
       <article class="card mb-5">
-        <img src="/robot/robot.png" class="card-img-top"/>
+        <img src="/robot/robot.png" class="card-img-top" alt="Real image of the constructed prototype which resembles the prototype"/>
         <div class="card-body  bg-body-tertiary">
-          <h2 class="card-title display-3 text-center"> Final Product </h2>
+          <h2 class="card-title display-3 text-center"> Current AUV Model </h2>
         </div>
       </article>
-      <c-header type=2> 
+      <c-header type=2 id="buoyancySystems">
+        Buoyancy Systems
+      </c-header>
+      <div class="justify-content-center row row-cols-2 row-cols-md-3 g-4">
+        <c-part name="150 mL Syringe" href="https://a.co/d/0hOC1GP" image="syringe.jpg"> </c-part>
+        <c-part name="70N Linear Motor Actuator" href="https://a.co/d/9IBrmj7" image="actuator.jpg"> </c-part>
+      </div>
+      <c-header type=2 id="electricalSystems">
+        Electrical Systems
+      </c-header>
+      <div class="justify-content-center row row-cols-2 row-cols-md-3 g-4">
+        <c-part name="Rechargeable 14.5 Li-po Battery" href="https://a.co/d/cM0wIh2" image="lipo.jpg"> </c-part>
+        <c-part name="5V Voltage Regulator" href="https://a.co/d/jgVMxn9" image="regulator.jpg"> </c-part>
+      </div>
+      <c-header type=2 id="computerSystems"> 
         Computer Systems
       </c-header>
-      <div class="justify-content-center row row-cols-2 row-cols-md-3 g-4" id="computerSystems">
+      <div class="justify-content-center row row-cols-2 row-cols-md-3 g-4">
         <c-part name="NVIDIA Jetson" href="https://a.co/d/eFkF9Wu" image="jetson.jpg"></c-part>
         <c-part name="Raspberry Pi Pico" href="https://a.co/d/i4piSYu" image="pico.jpg"></c-part>
         <c-part name="Arduino Nano" href="https://a.co/d/iBslOkX" image="nano.jpg"></c-part>
       </div>
-      <c-header type=2> 
+      <c-header type=2 id="sensors"> 
         Sensors
       </c-header>
-      <div class="justify-content-center row row-cols-2 row-cols-md-3 g-4" id="sensors">
+      <div class="justify-content-center row row-cols-2 row-cols-md-3 g-4">
         <c-part name="5 Megapixel Camera" href="https://a.co/d/924VXMo" image="camera.jpg"></c-part>
         <c-part name="Ping2 Sonar Altimeter and Echosounder" href="https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping-sonar-r2-rp/" image="sonar.jpg"></c-part>
         <c-part name="Bar30 Depth and Pressure Sensor" href="https://bluerobotics.com/store/sensors-sonars-cameras/sensors/bar30-sensor-r1/" image="depth.jpg"></c-part>
         <c-part name="Omnidirectional LIDAR Scanner" href="https://www.amazon.com/dp/B07TJW5SXF?_encoding=UTF8&psc=1&ref_=cm_sw_r_cp_ud_dp_9GB46PS7YBKKZPAJY3ES" image="lidar.jpg"></c-part>
         <c-part name="IMU" href="https://a.co/d/aPJRcbN" image="imu.jpg"></c-part>
         <c-part name="Proximity Sensor" href="https://a.co/d/dMGXr8U" image="proximity.jpg"></c-part>
+        <c-part name="Leak Detector" href="https://bluerobotics.com/store/sensors-sonars-cameras/leak-sensor/sos-leak-sensor/" image="leak.jpg"> </c-part>
       </div>
       <article class="mt-5 card mb-5" id="technicalDiagram">
         <img src="/res/electrical_diagram.svg" class="img-fluid"/> 
@@ -225,26 +270,26 @@
         </div>
       </article>
       <c-header type=1 id="ourSupporters"> 
-        Our Supporters
+        Our Sponsors
       </c-header>
-      <div class="d-flex justify-content-center">
+      <div class="mt-3 d-flex justify-content-center">
         <ul class="col-8 d-flex list-group">
           <!-- General Dynamics -->
-          <c-sponsor image="general_dynamics_logo.svg" href="https://www.gd.com/"> </c-sponsor>
+          <c-sponsor image="general_dynamics_logo.svg" href="https://www.gd.com/" name="General Dynamics logo"> </c-sponsor>
           <!-- Mitre -->
-          <c-sponsor image="mitre_logo.svg" href="https://www.mitre.org/"> </c-sponsor>
+          <c-sponsor image="mitre_logo.svg" href="https://www.mitre.org/" name="Mitre logo"> </c-sponsor>
           <!-- Wex Foundation -->
-          <c-sponsor image="wex_foundation_logo.svg" href="https://wexfoundation.org/"> </c-sponsor>
+          <c-sponsor image="wex_foundation_logo.svg" href="https://wexfoundation.org/" name="Wex Foundation logo"> </c-sponsor>
           <!-- Lockheed Martin -->
-          <c-sponsor image="lockheed_martin_logo.svg" href="https://www.lockheedmartin.com/"> </c-sponsor>
+          <c-sponsor image="lockheed_martin_logo.svg" href="https://www.lockheedmartin.com/" name="Lockheed Martin logo"> </c-sponsor>
           <!-- Alamo Colleges District -->
-          <c-sponsor image="alamo_colleges_district.svg" href="https://www.alamo.edu/"> </c-sponsor>
+          <c-sponsor image="alamo_colleges_district.svg" href="https://www.alamo.edu/" name="Alamo Colleges District logo"> </c-sponsor>
           <!-- UTSA --> 
-          <c-sponsor image="utsa.png" href="https://www.utsa.edu/"> </c-sponsor>
+          <c-sponsor image="utsa.png" href="https://www.utsa.edu/" name="University of Texas at San Antonio logo"> </c-sponsor>
           <!-- UTSA Engineering -->
-          <c-sponsor image="utsa_engineering_logo.svg" href="https://klesse.utsa.edu/"> </c-sponsor>
+          <c-sponsor image="utsa_engineering_logo.svg" href="https://klesse.utsa.edu/" name="Klesse College of Engineering and Integrated Design logo"> </c-sponsor>
           <!-- Pre freshman engineering program -->
-          <c-sponsor image="prep.png" href="https://klesse.utsa.edu/prep/"> </c-sponsor>
+          <c-sponsor image="prep.png" href="https://klesse.utsa.edu/prep/" name="Dr. Manuel P. Berriozábal Prefreshman Engineering Program"> </c-sponsor>
         </ul>
       </div>
     </div>
