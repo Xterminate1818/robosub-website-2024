@@ -224,44 +224,5 @@ class Sponsor extends HTMLElement {
 
 customElements.define("c-sponsor", Sponsor);
 
-const WEEKS = 6;
-
-async function getJournal(i) {
-  return await (await fetch("/journal/week" + i + ".html")).text();
-}
-
-let journal = [];
-for (let i = 1; i <= WEEKS; i++) {
-  journal.push(await getJournal(i))
-}
-
-function weekButton(i) {
-  return document.getElementById("week" + i)
-}
-
-function iterWeeks(f) {
-  for (let i = 1; i <= WEEKS; i++) {
-    let button = weekButton(i)
-    f(button, i)
-  }
-}
-
-function setActiveWeek(i) {
-  iterWeeks(
-    (b, _) => b.parentNode.classList.remove("active")
-  )
-  weekButton(i).parentNode.classList.add("active")
-  document.getElementById("journal").innerHTML = journal[i-1]
-}
-
-async function init() {
-  iterWeeks((b, i) => b.onclick = (ev) => setActiveWeek(i))
-  setActiveWeek(1)
-}
-
-// This prevents grabbing weeks from blocking (i think?)
-init()
-
-
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
