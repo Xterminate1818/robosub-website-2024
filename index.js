@@ -82,8 +82,7 @@ class Person extends HTMLElement {
     let major = this.getAttribute("major");
     let email = this.getAttribute("email");
     let picture = name.toLowerCase()
-      .replace(' ', '_')
-      .replace(' ', '_')
+      .replaceAll(' ', '_')
       .concat(".webp");
     let badges = this.getAttribute("badges").split(" ");
     let badges_html = ``;
